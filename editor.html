@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-80">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Project Text Board
+        </title>
+        <!--Icon-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <!--google font link-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Seymour+One&family=Signika+Negative:wght@300..700&family=Smokum&family=Teko:wght@300..700&family=Abril+Fatface&family=Anton&family=Dancing+Script:wght@400..700&family=Danfo&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Indie+Flower&family=Jacquard+12&family=Jaro:opsz@6..72&family=Major+Mono+Display&family=Micro+5+Charted&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+Khmer:wght@100..900&family=Oswald:wght@200..700&family=Pacifico&family=Permanent+Marker&family=Poetsen+One&family=Poppins:wght@400;500;600;700;800;900&family=Rubik+Mono+One&family=Shadows+Into+Light&family=Titan+One&display=swap" rel="stylesheet">
+    
+
+</head>
+    <body>
+        <div id="bgImg"></div>
+        <section class="editor">
+            <div class="header">
+                <div id="navbar">
+                    <a class="back"><i class="ri-arrow-left-s-line" id="back_icon"  onclick="window.location.href='index.html';"></i></a>
+                    <div class="inp m">
+                        <input placeholder="Enter your text"  id="text_inp">
+                        <div id="done_head">Done</div>
+                    </div>
+                    <a id="font_icon" class="m"><i class="ri-font-size"></i></a>
+                    <a id="ani_icon" class="m"><i class="ri-star-smile-line"></i></a>
+                    <a id="bord_icon" class="m"><i class="ri-shape-2-line"></i></a>
+                    <a id="hamburger" class="ham"><i class="ri-menu-line"></i></a>
+                </div>
+
+                <div id="font_style">
+                    <div id="color" class="font">Font Color</div>
+                    <div id="bg_font" class="font">Back ground Color</div>
+                    <div id="style" class="font">Font Style</div>
+                    <!-- <div id="bg_style" class="font">Background Style</div> -->
+                    <div id="emo_btn" class="font">Emoji</div>
+                    <div id="done_font" class="done_btn">Done</div>
+                </div>
+
+                <div id="font_color" class="color_fab">
+                    <h3>Font Color</h3>
+                    <div id="font_render">rgb(0, 0, 0)</div>
+                    <div class="color-wrap" id="fcolor_display">
+                    </div>
+                    <div class="slider">
+                        <label style="background-color: red;" for="red_font">Red:</label>
+                        <input type="number" id="red_font" class="ninput">
+                        <input id="fontRCode" type="range" min="0" max="255" value="0" class="rslide" style="accent-color: red;">
+                    </div>
+                    <div class="slider">
+                        <label style="background-color: green;" for="green_font">Green:</label>
+                        <input type="number" id="green_font" class="ninput">
+                        <input id="fontGCode" type="range" min="0" max="255" value="0" class="gslide" style="accent-color: green;">
+                    </div>
+                    <div class="slider">
+                        <label  style="background-color: blue;" for="blue_font">Blue:</label>
+                        <input type="number" id="blue_font" class="ninput">
+                        <input id="fontBCode" type="range" min="0" max="255" value="0" class="bslide" style="accent-color: blue;">
+                    </div>
+                    <div id="done_btn_color" class="done_btn">Done</div>
+                </div>
+                
+
+                <div id="font_bg" class="color_fab">
+                    <h3>Background Color</h3>
+                    <div id="bg_render">rgb(0, 0, 0)</div>
+                    <div class="color-wrap" id="bgcolor_display">
+                    </div>
+                    <div class="slider">
+                        <label style="background-color: red;" for="red_font">Red:</label>
+                        <input type="number" id="red_bg" class="ninput">
+                        <input id="bgRCode" type="range" min="0" max="255" value="0" style="accent-color: red;">
+                    </div>
+                    <div class="slider">
+                        <label style="background-color: green;" for="green_font">Green:</label>
+                        <input type="number" id="green_bg" class="ninput">
+                        <input id="bgGCode" type="range" min="0" max="255" value="0" style="accent-color: green;">
+                    </div>
+                    <div class="slider">
+                        <label  style="background-color: blue;" for="blue_font">Blue:</label>
+                        <input type="number" id="blue_bg" class="ninput">
+                        <input id="bgBCode" type="range" min="0" max="255" value="0" style="accent-color: blue;">
+                    </div>
+                    <div id="done_btn_bg" class="done_btn">Done</div>
+                </div>
+
+                <div id="emoji_group">
+                    <h3>Emoji</h3>
+                    <div class="g">
+                        <div class="g1">
+                            <span id="emo1">&#128522</span>
+                            <span id="emo2">&#128512</span>
+                            <span id="emo3">&#128514</span>
+                            <span id="emo4">&#128517</span>
+                            <span id="emo5">&#128520</span>
+                            <span id="emo6">&#128519</span>
+                            <span id="emo7">&#128523</span>
+                            <span id="emo8">&#128525</span>
+                            <span id="emo9">&#128526</span>
+                            <span id="emo10">&#128527</span>
+                        </div>
+                        <div class="g2">
+                            <span id="emo11">&#128530</span>
+                            <span id="emo12">&#128531</span>
+                            <span id="emo13">&#128534</span>
+                            <span id="emo14">&#128536</span>
+                            <span id="emo15">&#128541</span>
+                            <span id="emo16">&#128542</span>
+                            <span id="emo17">&#128543</span>
+                            <span id="emo18">&#128545</span>
+                            <span id="emo19">&#128548</span>
+                            <span id="emo20">&#128557</span>
+                        </div>
+                    </div>
+                    <div class="done_btn" id="done_emoji">Done</div>
+                </div>
+
+                <div id="style_group">
+                    <h3>Font Style</h3>
+                    <div class="sg">
+                        <div id="style1" class="style" style="font-family: 'Danfo';">Danfo</div>
+                        <div id="style2" class="style" style="font-family: 'Permanent Marker';">Permanent Marker</div>
+                        <div id="style3" class="style" style="font-family: 'Poppins';">Poppins</div>
+                        <div id="style4" class="style" style="font-family: 'Josefin Sans';">Josefin Sans</div>
+                        <div id="style5" class="style" style="font-family: 'Poetsen One';">Poetsen One</div>
+                        <div id="style6" class="style" style="font-family: 'Oswald';">Oswald</div>
+                        <div id="style7" class="style" style="font-family: 'Concert One';">Concert One</div>
+                        <div id="style8" class="style" style="font-family: 'Teko';">Teko</div>
+                        <div id="style9" class="style" style="font-family: 'Major Mono Display';">Major Mono Display</div>
+                        <div id="style10" class="style" style="font-family: 'Jaro';">jaro</div>
+                        <div id="style11" class="style" style="font-family: 'Dancing Script';">Dancing Script</div>
+                        <div id="style12" class="style" style="font-family: 'Anton';">Anton</div>
+                        <div id="style13" class="style" style="font-family: 'Seymour One';">Seymour One</div>
+                        <div id="style14" class="style" style="font-family: 'Pacifico';">Pacifico</div>
+                        <div id="style15" class="style" style="font-family: 'Shadows Into Light';">Shadows Into Light</div>
+                        <div id="style16" class="style" style="font-family: 'Abril Fatface';">Abril Fatface</div>
+                        <div id="style17" class="style" style="font-family: 'Smokum';">Smokum</div>
+                        <div id="style18" class="style" style="font-family: 'Rubik Mono One';">Rubik Mono One</div>
+                        <div id="style19" class="style" style="font-family: 'Indie FLower';">Indie Flower</div>
+                        <div id="style20" class="style" style="font-family: 'Titan One';">Titan One</div>
+                    </div>
+                    <div id="done_btn_style" class="done_btn">Done</div>
+                </div>
+
+                <div id="bg_img">
+                    <h3>Background Image</h3>
+                    <div id="img1" class="img"><img src="img/air.jpg"></div> 
+                    <div id="img2" class="img"><img src="img/board.jpg"></div> 
+                    <div id="img3" class="img"><img src="img/gal.jpg"></div> 
+                    <div id="img4" class="img"><img src="img/jungle.jpg"></div> 
+                    <div id="img5" class="img"><img src="img/rock.jpg"></div> 
+                    <div id="img6" class="img"><img src="img/sand.jpg"></div> 
+                    <div id="img7" class="img"><img src="img/water.jpg"></div> 
+                    <div id="img8" class="img"><img src="img/wood.jpg"></div>
+                    <div id="img9" class="img"><img src="img/led.jpg"></div>
+                    <div id="img10" class="img"></div> 
+                    <div id="done_btn_img" class="done_btn">Done</div>
+                </div>
+
+                    <!-- <div id="sticker">
+                        <div class="stick">1</div>
+                        <div class="stick">2</div>
+                        <div class="stick">3</div>
+                        <div class="stick">4</div>
+                        <div class="stick">5</div>
+                        <div class="stick">6</div>
+                    </div> -->
+
+                <div id="ani_option">
+                    <h3>Animation</h3>
+                    <div id="textAni" class="ani">Text Animation</div>
+                    <div id="bgAni"  class="ani">Background Animation</div>
+                    <div class="done_btn" id="done_list">Done</div>
+                </div>
+
+                <div id="background_ani">
+                    <h3>Background Animation</h3>
+                    <div class="aniGr">
+                        <a id="bgAni1"><img src="gifs/building.gif" alt="#" id="bgAni1"></a>
+                        <a id="bgAni2"><img src="gifs/Cotton candy.gif" alt="#" id="bgAni2"></a>
+                        <a id="bgAni3"><img src="gifs/download.gif" alt="#" id="bgAni3"></a>
+                        <a id="bgAni4"><img src="gifs/Generosity.gif" alt="#" id="bgAni4"></a>
+                        <a id="bgAni5"><img src="gifs/heart.gif" alt="#" id="bgAni5"></a>
+                        <a id="bgAni6"><img src="gifs/Micro Cosmic.gif" alt="#" id="bgAni6"></a>
+                        <a id="bgAni7"><img src="gifs/Moods.gif" alt="#" id="bgAni7"></a>
+                    </div>
+                    <div class="done_btn" id="done_bgAni">Done</div>
+                </div>
+
+                <div id="animation">
+                    <h3>Animation List</h3>
+                    <div class="ag">
+                        <div id="ani1" class="ani"><a class="a1">animtion1</a></div>
+                        <div id="ani2" class="ani"><a class="a2">animtion2</a></div>
+                        <div id="ani3" class="ani"><a class="a3">animtion3</a></div>
+                        <div id="ani4" class="ani"><a class="a4">animtion4</a></div>
+                        <div id="ani5" class="ani"><a class="a5">animtion5</a></div>
+                        <div id="ani6" class="ani"><a class="a6">animtion6</a></div>
+                        <div id="ani7" class="ani"><a class="a7">animtion7</a></div>
+                        <div id="ani8" class="ani"><a class="a8">animtion8</a></div>
+                        <div id="ani9" class="ani"><a class="a9">animtion9</a></div>
+                        <div id="ani10" class="ani"><a class="a10">animtion10</a></div>
+                        <div id="ani11" class="ani"><a class="a11">animtion11</a></div>
+                    </div>
+                    <div id="done_ani" class="done_btn">Done</div>
+                </div>
+
+                <div id="bg_part">
+                    <h3>Board Style</h3>
+                    <div id="border_group" class="b">
+                        Border Style
+                    </div>
+                    <div id="background_styl"  class="b">
+                        Background Style
+                    </div>
+                    <div class="done_btn" id="done_bord_sty">Done</div>
+                </div>
+                <div id="border_style">
+                    <h3>Border List</h3>
+                    <div><a id="border1" class="border" style="border-style: solid; border-color: #fff">solid</a></div>
+                    <div><a id="border2" class="border" style="border-style: dashed; border-color: #fff">dashed</a></div>
+                    <div><a id="border3" class="border" style="border-style: dotted; border-color: #fff">dotted</a></div>
+                    <div><a id="border4" class="border" style="border-style: double; border-color: #fff">double</a></div>
+                    <div><a id="border5" class="border" style="border-style: inset; border-color: #fff">inset</a></div>
+                    <div><a id="border6" class="border" style="border-style: outset; border-color: #fff">outset</a></div>
+                    <div><a id="border7" class="border" style="border-style: groove; border-color: #fff">groove</a></div>
+                    <div><a id="border8" class="border" style="border-style: ridge;border-color: #fff">ridge</a></div>
+                    <a id="done_border" class="done_btn">Done</a>
+                </div>
+
+                <div id="semi_navbar">
+                    <div class="inp m">
+                        <input placeholder="Enter your text"  id="text_inps">
+                        <div id="sdone_head" class="shead_done">Done</div>
+                    </div>
+                    <a id="font_icons" class="m m1"><i class="ri-font-size"></i>Font Custom</a>
+                    <a id="ani_icons" class="m"><i class="ri-star-smile-line"></i>Animation</a>
+                    <a id="bord_icons" class="m"><i class="ri-shape-2-line"></i>Border</a>
+                    <div id="semi_done" class="done_btn">Done</div>
+                </div>
+            </div>
+
+            <div class="body_text">
+                <div id="text_control">
+                    <div id="text">
+                        <span id="st">
+                            Text Board
+                        </span>
+                        <span id="emo_main">
+                            &#128522
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="show" class="sub_btn">Done</div>
+        <div id="exit" class="sub_btn">Show</div>
+
+        <div id="catchMe">Done</div>
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
+    </body>
+</html>
